@@ -1,0 +1,640 @@
+@import 'fonts/fontawesome/scss/fontawesome.scss';
+@import 'fonts/fontawesome/scss/solid.scss';
+@import 'fonts/fontawesome/scss/brands.scss';
+@import 'style/font.scss';
+
+$color-dark: rgb(44, 64, 88);
+$color-light: rgb(255, 255, 255);
+$color-light-transparent: rgba(255, 255, 255, 0.4);
+$color-dark-transparent: rgba(44, 64, 88, 0.2);
+$color-darker-transparent: rgba(44, 64, 88, 0.8);
+
+@mixin title($color) {
+    font-size: 44px;
+    font-family: "Gotham";
+    color: $color;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+  
+
+body {
+    position: relative;
+}
+
+nav {
+    position: absolute;
+    top: 53px;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.nav {
+    &-bar {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0;
+        margin: 0;
+        flex-grow: 1;
+    }
+    &-item {
+        font-size: 14px;
+        font-family: "Gotham";
+        font-weight: 300;
+        color: $color-light;
+        text-transform: uppercase;
+        
+        a {
+            text-decoration: none;
+            color: $color-light;
+            display: flex;
+            align-items: center;
+            &:visited {
+                color: $color-light;
+            }
+        }
+
+        &__circle {
+            box-sizing: border-box;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            border: 1px solid $color-light;
+            margin-right: 14px;
+
+        }
+
+        &:hover {
+            & .nav-item__circle {
+                background-color: $color-light;
+            }
+        }
+    }
+
+    &-social {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}
+
+  
+.social-wrapper {
+    color: $color-light;
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $color-light-transparent;
+    border-radius: 50%;
+    margin: 0 10px 0 10px;
+    text-decoration: none;
+
+    &:hover {
+        background-color: $color-light-transparent;
+        border: 1px solid $color-light;
+    }
+}
+
+
+header {
+    height: 95vh;
+    position: relative;
+    
+    background: linear-gradient(45deg, rgba(85,183,255,1) 0%, rgba(126,90,255,1) 100%);
+    display: flex;
+    justify-content: center;
+}
+
+.header{
+    &-slider{
+        width: 100%;
+        height: 100%;
+        &-item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 95vh;
+            background-image: url('img/Bg-header.png');
+            background-size: cover;
+        }
+    }
+
+    &__title {
+        font-size: 80px;
+        font-family: "Gotham";
+        color: $color-light;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 3.8px;
+        margin: 10px 0 10px 0;
+    }
+
+    &__subtitle {
+        font-size: 18px;
+        font-family: "Gotham";
+        font-weight: 300;
+        color: $color-light;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 5.4px;
+        margin: 9px 0 9px 0;
+    }
+
+    &-slider {
+        &-dots{
+            position: absolute;
+            top: 40vh;
+            bottom: 0;
+            right: 40px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            li {
+                box-sizing: border-box;
+                width: 9px;
+                height: 9px;
+                border-radius: 50%;
+                border: 1px solid $color-light;
+                margin: 20px 0 20px 0;
+                &:hover{
+                    background-color: $color-light-transparent;
+                }
+                button {
+                    visibility: hidden;
+                }
+            }
+
+            .slick-active {
+                background-color: $color-light;
+            }
+        }
+    }
+}
+
+
+  
+  
+
+.arrow {
+    
+
+    &-wrapper {
+        position: absolute;
+        bottom: 49px;
+        z-index: 99;
+    }
+
+    &:hover{
+        & .arrow__circle{
+            fill: $color-light-transparent;
+        }
+    }
+    
+}
+
+
+.hline {
+    box-sizing: border-box;
+    width: 100px;
+    border: none;
+    border-top: solid 1px $color-dark;
+    margin: 0 auto 0 auto;
+
+    &--light {
+        border-top: solid 1px $color-light;
+    }
+}
+
+.projects {
+    padding-top: 99px;
+    padding-bottom: 140px;
+    margin:  0 auto 0 auto;
+
+    &-item {
+        padding: 70px 0 0 0;
+        margin: 60px 0 140px 0;
+    }
+
+    &__img {
+
+        &--left {
+            box-shadow: -260px -70px 0px 0px rgba(85,184,255,1);
+        }
+
+        &--right {
+            box-shadow: 260px -70px 0px 0px rgba(126,90,255,1);
+        }
+    }
+}
+
+
+.title {
+    @include title($color-dark);
+    margin: 0;
+    &--main {
+        margin: 30px 0 30px 0;
+    }
+
+    &--light {
+        color: $color-light;
+    }
+
+    &--secondary {
+        font-size: 22px;
+        font-weight: 300;
+    }
+
+    &--left {
+        text-align: left;
+    }
+
+    &--thin {
+        font-weight: 400;
+    }
+
+    &--small {
+        margin: 19px 0 19px 0;
+    }
+}
+
+.paragraph {
+    font-size: 18px;
+    font-family: "OpenSans";
+    color: rgb(75, 85, 98);
+    line-height: 1.667;
+    text-align: left;
+    margin: 25px 0 50px 0;
+}
+
+
+.btn {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-dark;
+    border: 1px solid $color-dark;
+    width: 188px;
+    height: 48px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: transparent;
+    &--submit {
+        width: 140px;
+        height: 50px;
+        margin: 20px 0 0 auto;
+    }
+
+    &:hover {
+        background-color:  $color-dark-transparent;
+    }
+}
+
+.marck {
+    font-size: 18px;
+    font-family: "OpenSans";
+    font-style: italic;
+    color: $color-dark;
+    text-align: left;
+
+    &-wrapper {
+        margin: 40px 0 0 0;
+    }
+}
+
+.news {
+    background-image: url("img/Bg-news.png");
+    background-size: cover;
+    padding: 140px 0 80px 0;
+
+    &-slider {
+
+        &-wrapper {
+            position: relative;
+        }
+
+
+        &-dots {
+            list-style: none;
+            margin: 60px auto 60px auto;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            li {
+                box-sizing: border-box;
+                width: 9px;
+                height: 9px;
+                border-radius: 50%;
+                border: 1px solid $color-light;
+                margin: 0 20px 0 20px;
+                &:hover{
+                    background-color: $color-light-transparent;
+                }
+                button {
+                    visibility: hidden;
+                }
+            }
+
+            .slick-active {
+                background-color: $color-light;
+            }
+
+    
+        }
+
+        &-arr {
+            position: absolute;
+            top: 45%;
+
+            &:hover {
+                
+            }
+
+            &--left {
+                left: -100px;
+            }
+
+            &--right {
+                right: -100px;
+            }
+        }
+
+    }
+}
+
+#maximized {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    &__img {
+        position: absolute;
+        width: 70%;
+    }
+
+    &-close {
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        font-size: 42px;
+        color: $color-light;
+
+        &:hover {
+            color: $color-dark;
+        }
+    }
+}
+
+#cover {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: $color-darker-transparent;
+}
+
+
+
+
+.card {
+    background-color: $color-light;
+    width: 370px;
+    height: 514px;
+    margin: 0 15px 0 15px;
+
+    &-head {
+        height: 240px;
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover .maximize {
+            visibility: visible;
+            cursor: pointer;
+        }
+
+        &__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &-body {
+        padding: 20px 20px 0 20px;
+
+        &__title {
+            font-size: 22px;
+            font-family: "Gotham";
+            color: $color-dark;
+            font-weight: bold;
+            text-transform: uppercase;
+            line-height: 1.545;
+            text-align: left;
+            margin: 1px 0 0 0;
+            letter-spacing: 0.3px;
+        }
+
+        &__p {
+            font-size: 18px;
+            font-family: "OpenSans";
+            color: rgb(75, 85, 98);
+            line-height: 1.667;
+            text-align: left;
+            margin: 3px 0 0 0;
+            letter-spacing: -0.162px;
+
+        }
+
+    }
+
+
+    &-footer {
+        padding: 30px 20px 30px 20px;
+
+        &-text-wrapper {
+            margin: 3px 0 0 18px;
+        }
+    }
+
+
+}
+
+
+.avatar {
+
+    &-img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    &-name {
+        font-size: 18px;
+        font-family: "Gotham";
+        color: $color-dark;
+        text-transform: uppercase;
+        text-align: left;
+        margin: 7px 0 7px 0;
+    }
+
+
+}
+
+.date {
+    font-size: 14px;
+    font-family: "Gotham";
+    color: rgb(85, 183, 255);
+    text-align: left;
+}
+
+  
+.link-profile {
+    text-decoration: none;
+    color: $color-dark;
+    display: flex;
+}
+
+.maximize{
+    position: absolute;
+    visibility: hidden;
+    &:hover {
+        & .maximaize-circle {
+            fill: $color-light-transparent;
+        }
+    }
+}
+
+
+.gallery {
+    padding: 140px 0 140px 0;
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &-wrapper {
+        margin-top: 63px;
+        margin-bottom: 60px;
+    }
+}
+
+.equal {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.contact {
+    height: 699px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+
+
+    &-wrapper {
+        width: 770px;
+        height: 450px;
+        box-shadow: 0px -4px 30px 0px rgba(133, 133, 133, 0.2);
+        background-color: $color-light;
+        position: absolute;
+        bottom: -150px;
+        padding: 60px 60px 0 60px;
+        background-image: url("img/bg-form.png");
+        background-size: cover;
+        &-inner {
+            display: flex;
+            justify-content: space-between;
+        }
+
+    }
+
+}
+
+.address {
+    padding: 5px 0 0 0;
+    flex-grow: 1;
+    &-item {
+        font-size: 18px;
+        font-family: "Gotham";
+        font-weight: 300;
+        text-align: left;
+        line-height: 58px;
+        &__icon {
+            color: rgb(126,90,255);
+        }
+    }
+}
+
+.form {
+    width: 310px;
+    position: relative;
+    &__input {
+        width: 100%;
+        border: none;
+        font-size: 18px;
+        font-family: "Gotham";
+        font-weight: 300;
+        color: $color-dark-transparent;
+        border-bottom: 1px solid $color-dark-transparent;
+        line-height: 57px;
+        margin: 5px 0 9px 0;
+
+        &:hover {
+            border-bottom: 1px solid $color-dark;
+        }
+
+        &:focus {
+            border-bottom: 1px solid $color-dark;
+            color: $color-dark;
+        }
+
+    }
+}
+
+   
+
+.map {
+    height: 100%;
+    width: 100%;
+}
+
+
+footer {
+    background-image: url("img/Bg-footer.png");
+    background-size: cover;
+    padding: 205px 0 205px 0;
+
+}
+
+.copy {
+    margin: 40px 0 40px 0;
+    font-size: 14px;
+    font-family: "Gotham";
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+    letter-spacing: 0.5px;
+}
+
