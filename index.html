@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monticello</title>
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/bootstrap-grid.min.css">
+    <link rel="stylesheet" type="text/css" href="scripts/slick/slick.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <nav class="container">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="241px" height="54px">
+            <path fill-rule="evenodd" fill="rgb(255, 255, 255)"
+                d="M238.639,43.629 L237.180,43.629 L237.180,45.768 L236.501,45.768 L236.501,39.707 L238.751,39.707 C240.107,39.707 241.000,40.434 241.000,41.629 L241.000,41.646 C241.000,42.954 239.918,43.629 238.639,43.629 ZM240.313,41.655 C240.313,40.788 239.669,40.338 238.699,40.338 L237.180,40.338 L237.180,43.005 L238.665,43.005 C239.660,43.005 240.313,42.468 240.313,41.671 L240.313,41.655 ZM231.447,30.218 C225.988,30.218 221.945,26.034 221.945,20.811 L221.945,20.759 C221.945,15.535 226.039,11.300 231.498,11.300 C236.957,11.300 241.000,15.483 241.000,20.707 L241.000,20.759 C241.000,25.982 236.905,30.218 231.447,30.218 ZM235.996,20.759 C235.996,18.134 234.151,15.847 231.447,15.847 C228.768,15.847 226.974,18.082 226.974,20.707 L226.974,20.759 C226.974,23.384 228.818,25.671 231.498,25.671 C234.202,25.671 235.996,23.436 235.996,20.811 L235.996,20.759 ZM218.598,45.871 C216.769,45.871 215.542,44.425 215.542,42.754 L215.542,42.737 C215.542,41.066 216.786,39.602 218.615,39.602 C220.444,39.602 221.671,41.049 221.671,42.720 L221.671,42.737 C221.671,44.408 220.426,45.871 218.598,45.871 ZM220.967,42.737 C220.967,41.360 219.972,40.235 218.598,40.235 C217.224,40.235 216.245,41.343 216.245,42.720 L216.245,42.737 C216.245,44.113 217.241,45.239 218.615,45.239 C219.988,45.239 220.967,44.131 220.967,42.754 L220.967,42.737 ZM205.464,11.664 L210.366,11.664 L210.366,25.437 L218.934,25.437 L218.934,29.854 L205.464,29.854 L205.464,11.664 ZM198.780,45.871 C196.892,45.871 195.725,44.486 195.725,42.754 L195.725,42.737 C195.725,41.074 196.935,39.602 198.738,39.602 C199.751,39.602 200.378,39.896 200.978,40.408 L200.541,40.927 C200.077,40.521 199.562,40.235 198.713,40.235 C197.381,40.235 196.428,41.369 196.428,42.720 L196.428,42.737 C196.428,44.182 197.347,45.257 198.807,45.257 C199.494,45.257 200.129,44.988 200.541,44.651 L200.541,43.143 L198.713,43.143 L198.713,42.529 L201.193,42.529 L201.193,44.945 C200.635,45.447 199.794,45.871 198.780,45.871 ZM187.365,11.664 L192.268,11.664 L192.268,25.437 L200.835,25.437 L200.835,29.854 L187.365,29.854 L187.365,11.664 ZM181.224,39.707 L181.903,39.707 L181.903,45.135 L185.285,45.135 L185.285,45.768 L181.224,45.768 L181.224,39.707 ZM167.977,11.664 L182.206,11.664 L182.206,15.951 L172.830,15.951 L172.830,18.706 L181.321,18.706 L181.321,22.682 L172.830,22.682 L172.830,25.566 L182.332,25.566 L182.332,29.854 L167.977,29.854 L167.977,11.664 ZM161.440,40.798 L161.440,45.768 L160.779,45.768 L160.779,39.707 L161.415,39.707 L165.201,44.564 L165.201,39.707 L165.862,39.707 L165.862,45.768 L165.321,45.768 L161.440,40.798 ZM155.666,25.618 C157.511,25.618 158.597,24.735 159.659,23.410 L163.349,26.112 C161.681,28.477 159.431,30.218 155.514,30.218 C150.460,30.218 146.391,26.242 146.391,20.811 L146.391,20.759 C146.391,15.458 150.359,11.300 155.716,11.300 C159.330,11.300 161.655,12.859 163.222,15.094 L159.532,18.030 C158.522,16.731 157.359,15.899 155.666,15.899 C153.190,15.899 151.446,18.056 151.446,20.707 L151.446,20.759 C151.446,23.488 153.190,25.618 155.666,25.618 ZM144.167,39.707 L144.844,39.707 L144.844,45.768 L144.167,45.768 L144.167,39.707 ZM136.305,11.664 L141.234,11.664 L141.234,29.854 L136.305,29.854 L136.305,11.664 ZM139.396,40.338 L137.378,40.338 L137.378,45.768 L136.692,45.768 L136.692,40.338 L134.674,40.338 L134.674,39.707 L139.396,39.707 L139.396,40.338 ZM126.218,29.854 L121.315,29.854 L121.315,16.081 L116.008,16.081 L116.008,11.664 L131.525,11.664 L131.525,16.081 L126.218,16.081 L126.218,29.854 ZM119.854,44.564 L119.854,39.707 L120.515,39.707 L120.515,45.768 L119.974,45.768 L116.093,40.798 L116.093,45.768 L115.432,45.768 L115.432,39.707 L116.068,39.707 L119.854,44.564 ZM99.476,19.875 L99.476,29.854 L94.624,29.854 L94.624,11.664 L99.198,11.664 L106.476,21.279 L106.476,11.664 L111.328,11.664 L111.328,29.854 L107.032,29.854 L99.476,19.875 ZM89.866,45.768 L89.180,45.768 L89.180,40.338 L87.162,40.338 L87.162,39.707 L91.884,39.707 L91.884,40.338 L89.866,40.338 L89.866,45.768 ZM79.986,30.218 C74.527,30.218 70.484,26.034 70.484,20.811 L70.484,20.759 C70.484,15.535 74.578,11.300 80.037,11.300 C85.496,11.300 89.539,15.483 89.539,20.707 L89.539,20.759 C89.539,25.982 85.444,30.218 79.986,30.218 ZM84.535,20.759 C84.535,18.134 82.690,15.847 79.986,15.847 C77.307,15.847 75.513,18.082 75.513,20.707 L75.513,20.759 C75.513,23.384 77.358,25.671 80.037,25.671 C82.741,25.671 84.535,23.436 84.535,20.811 L84.535,20.759 ZM68.047,53.769 L67.676,53.989 L36.367,0.225 L36.737,0.006 L46.622,16.981 L46.622,11.664 L51.803,11.664 L56.023,18.706 L60.243,11.664 L65.424,11.664 L65.424,29.854 L60.547,29.854 L60.547,19.407 L56.023,26.528 L55.922,26.528 L51.424,19.459 L51.424,25.225 L68.047,53.769 ZM30.983,12.958 L51.538,48.148 L22.919,48.400 L25.241,42.791 L41.890,42.644 L31.080,24.136 L17.439,48.449 L-0.000,48.602 L25.747,3.835 L28.976,9.361 L9.671,42.928 L14.191,42.888 L30.983,12.958 ZM72.172,45.768 L71.494,45.768 L71.494,39.707 L72.172,39.707 L72.172,45.768 ZM81.791,44.564 L81.791,39.707 L82.452,39.707 L82.452,45.768 L81.911,45.768 L78.030,40.798 L78.030,45.768 L77.369,45.768 L77.369,39.707 L78.005,39.707 L81.791,44.564 ZM100.939,40.330 L97.273,40.330 L97.273,42.399 L100.552,42.399 L100.552,43.022 L97.273,43.022 L97.273,45.143 L100.981,45.143 L100.981,45.768 L96.594,45.768 L96.594,39.707 L100.939,39.707 L100.939,40.330 ZM110.078,40.313 C110.369,40.607 110.541,41.032 110.541,41.507 L110.541,41.524 C110.541,42.529 109.854,43.118 108.911,43.291 L110.756,45.768 L109.923,45.768 L108.181,43.412 L106.464,43.412 L106.464,45.768 L105.785,45.768 L105.785,39.707 L108.370,39.707 C109.108,39.707 109.700,39.932 110.078,40.313 ZM106.464,40.338 L106.464,42.798 L108.309,42.798 C109.211,42.798 109.854,42.330 109.854,41.551 L109.854,41.533 C109.854,40.788 109.288,40.338 108.318,40.338 L106.464,40.338 ZM128.513,39.663 L131.252,45.768 L130.522,45.768 L129.818,44.165 L126.547,44.165 L125.834,45.768 L125.139,45.768 L127.878,39.663 L128.513,39.663 ZM129.552,43.551 L128.187,40.460 L126.813,43.551 L129.552,43.551 ZM152.850,39.602 C154.679,39.602 155.906,41.049 155.906,42.720 L155.906,42.737 C155.906,44.408 154.661,45.871 152.832,45.871 C151.003,45.871 149.776,44.425 149.776,42.754 L149.776,42.737 C149.776,41.066 151.021,39.602 152.850,39.602 ZM150.480,42.737 C150.480,44.113 151.476,45.239 152.850,45.239 C154.223,45.239 155.202,44.131 155.202,42.754 L155.202,42.737 C155.202,41.360 154.206,40.235 152.832,40.235 C151.459,40.235 150.480,41.343 150.480,42.720 L150.480,42.737 ZM173.861,39.663 L176.599,45.768 L175.870,45.768 L175.166,44.165 L171.895,44.165 L171.182,45.768 L170.487,45.768 L173.225,39.663 L173.861,39.663 ZM174.900,43.551 L173.534,40.460 L172.161,43.551 L174.900,43.551 ZM210.454,40.313 C210.746,40.607 210.918,41.032 210.918,41.507 L210.918,41.524 C210.918,42.529 210.231,43.118 209.287,43.291 L211.132,45.768 L210.299,45.768 L208.557,43.412 L206.840,43.412 L206.840,45.768 L206.161,45.768 L206.161,39.707 L208.746,39.707 C209.484,39.707 210.076,39.932 210.454,40.313 ZM206.840,40.338 L206.840,42.798 L208.685,42.798 C209.587,42.798 210.231,42.330 210.231,41.551 L210.231,41.533 C210.231,40.788 209.664,40.338 208.694,40.338 L206.840,40.338 ZM227.129,43.187 C227.129,44.494 227.816,45.230 228.966,45.230 C230.074,45.230 230.778,44.554 230.778,43.230 L230.778,39.707 L231.456,39.707 L231.456,43.179 C231.456,44.945 230.452,45.862 228.949,45.862 C227.464,45.862 226.451,44.945 226.451,43.230 L226.451,39.707 L227.129,39.707 L227.129,43.187 Z" />
+        </svg>
+
+        <ul class="nav-bar">
+            <li class="nav-item">
+                <a href="#header">
+                    <div class="nav-item__circle"></div>
+                    <div>ABOUT US</div>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#projects">
+                    <div class="nav-item__circle"></div>
+                    <div>PROJECTS</div>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#news">
+                    <div class="nav-item__circle"></div>
+                    <div>NEWS</div>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#contacts">
+                    <div class="nav-item__circle"></div>
+                    <div>CONTACT</div>
+                </a>
+            </li>
+        </ul>
+
+
+        <div class="nav-social">
+            <a class="social-wrapper" href="https://www.facebook.com" target="_blank"><i
+                    class="fab fa-facebook-f"></i></a>
+            <a class="social-wrapper" href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a class="social-wrapper" href="https://www.instagram.com" target="_blank"><i
+                    class="fab fa-instagram"></i></a>
+        </div>
+
+
+    </nav>
+
+
+
+    <header id="header">
+
+        <div class="header-slider">
+            <div>
+                <div class="header-slider-item">
+                    <h1 class="header__title">
+                        Simple & mordern
+                    </h1>
+                    <h4 class="header__subtitle">
+                        We make the world's beautiful every day
+                    </h4>
+                </div>
+            </div>
+            <div>
+                <div class="header-slider-item">
+
+                    <h2 class="header__title">
+                        Simple & mordern2
+                    </h2>
+                    <h4 class="header__subtitle">
+                        We make the world's beautiful every day
+                    </h4>
+                </div>
+            </div>
+            <div>
+                <div class="header-slider-item">
+
+                    <h2 class="header__title">
+                        Simple & mordern3
+                    </h2>
+                    <h4 class="header__subtitle">
+                        We make the world's beautiful every day
+                    </h4>
+                </div>
+            </div>
+            <div>
+                <div class="header-slider-item">
+
+                    <h2 class="header__title">
+                        Simple & mordern4
+                    </h2>
+                    <h4 class="header__subtitle">
+                        We make the world's beautiful every day
+                    </h4>
+                </div>
+            </div>
+            <div>
+                <div class="header-slider-item">
+
+                    <h2 class="header__title">
+                        Simple & mordern5
+                    </h2>
+                    <h4 class="header__subtitle">
+                        We make the world's beautiful every day
+                    </h4>
+                </div>
+            </div>
+
+        </div>
+
+
+        <a href="#projects" class="arrow-wrapper">
+            <svg class="arrow" width="42" height="42" viewBox="0 0 42 42" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path class="arrow__circle" opacity="0.702" fill-rule="evenodd" clip-rule="evenodd"
+                    d="M21 1C32.046 1 41 9.954 41 21C41 32.045 32.046 41 21 41C9.954 41 1 32.045 1 21C1 9.954 9.954 1 21 1Z"
+                    stroke="white" />
+                <path
+                    d="M20.1891 24.3674L16.6288 20.7007C16.4571 20.5238 16.4571 20.2371 16.6288 20.0603L17.044 19.6326C17.2155 19.4561 17.4933 19.4557 17.6651 19.6319L20.5 22.5378L23.3349 19.6319C23.5067 19.4557 23.7845 19.4561 23.956 19.6326L24.3712 20.0603C24.5429 20.2371 24.5429 20.5238 24.3712 20.7007L20.8109 24.3674C20.6392 24.5442 20.3608 24.5442 20.1891 24.3674Z"
+                    fill="white" />
+            </svg>
+        </a>
+
+
+
+    </header>
+
+
+
+    <section id="projects" class="projects container">
+        <hr class="hline">
+        <h2 class="title title--main">what we do</h2>
+        <article class="projects-item">
+            <div class="row">
+                <div class="col flex-grow-1">
+                    <img src="img/Trade-center.png" alt="Trade center" class="projects__img projects__img--left">
+                </div>
+                <div class="col-md-5 row flex-column justify-content-center">
+                    <h3 class="title title--secondary title--left">
+                        One World
+                    </h3>
+                    <h2 class="title title--left">
+                        Trade Center
+                    </h2>
+
+                    <p class="paragraph">
+                        Increasing prosperity in our lives can be accomplished by having the right frame of mind. The
+                        truth is, our thoughts are very powerful.
+                    </p>
+
+                    <a href="#" class="btn">more details</a>
+
+                    <div class="marck-wrapper">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span class="marck"> New York City, United States - 1776 feet</span>
+                    </div>
+
+                </div>
+            </div>
+        </article>
+
+
+        <article class="projects-item">
+            <div class="row">
+
+                <div class="col-md-5 row flex-column justify-content-center">
+                    <h3 class="title title--secondary title--left">
+                        International
+                    </h3>
+                    <h2 class="title title--left">
+                        Commerce Centre
+                    </h2>
+
+                    <p class="paragraph">
+                        Successful businesses have many things in common, today we’ll look at the big ‘R’ of recognition
+                        and how a digital advertising network may help.
+                    </p>
+
+                    <a href="#" class="btn">more details</a>
+
+                    <div class="marck-wrapper">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span class="marck"> Hong Kong - 1588 Feet</span>
+                    </div>
+
+                </div>
+                <div class="col flex-grow-1">
+                    <img src="img/Commerce-centre.png" alt="Trade center" class="projects__img projects__img--right">
+                </div>
+            </div>
+        </article>
+
+    </section>
+
+    <section id="news" class="news">
+        <hr class="hline hline--light">
+        <h2 class="title title--light title--thin title--main">
+            latest news
+        </h2>
+
+
+        <div class="container">
+
+            <div class="news-slider-wrapper">
+                <svg class="news-slider-arr news-slider-arr--left arrow" width="42" height="42" viewBox="0 0 42 42"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="arrow__circle" opacity="0.702" fill-rule="evenodd" clip-rule="evenodd"
+                        d="M21 1C32.046 1 41 9.954 41 21C41 32.045 32.046 41 21 41C9.954 41 1 32.045 1 21C1 9.954 9.954 1 21 1Z"
+                        stroke="white" />
+                    <path
+                        d="M18.1326 20.6891L21.7993 17.1288C21.9762 16.9571 22.2629 16.9571 22.4397 17.1288L22.8674 17.544C23.0439 17.7155 23.0443 17.9933 22.8681 18.1651L19.9622 21L22.8681 23.8349C23.0443 24.0067 23.0439 24.2845 22.8674 24.456L22.4397 24.8712C22.2629 25.0429 21.9762 25.0429 21.7993 24.8712L18.1326 21.3109C17.9558 21.1392 17.9558 20.8608 18.1326 20.6891Z"
+                        fill="white" />
+                </svg>
+
+
+                <svg class="news-slider-arr news-slider-arr--right arrow" width="42" height="42" viewBox="0 0 42 42"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="arrow__circle" opacity="0.702" fill-rule="evenodd" clip-rule="evenodd"
+                        d="M21 1C32.046 1 41 9.954 41 21C41 32.045 32.046 41 21 41C9.954 41 1 32.045 1 21C1 9.954 9.954 1 21 1Z"
+                        stroke="white" />
+                    <path
+                        d="M23.8674 21.3109L20.2007 24.8712C20.0238 25.0429 19.7371 25.0429 19.5603 24.8712L19.1326 24.456C18.9561 24.2845 18.9557 24.0067 19.1319 23.8349L22.0378 21L19.1319 18.1651C18.9557 17.9933 18.9561 17.7155 19.1326 17.544L19.5603 17.1288C19.7371 16.9571 20.0238 16.9571 20.2007 17.1288L23.8674 20.6891C24.0442 20.8608 24.0442 21.1392 23.8674 21.3109Z"
+                        fill="white" />
+                </svg>
+
+                <div class="news-slider">
+
+
+
+
+
+                    <div class="card">
+                        <div class="card-head">
+                            <img src="img/card1.png" alt="" class="card-head__img">
+                            <svg class="maximize" data-img-source="img/card1.png" width="82" height="82"
+                                viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="maximaize-circle" fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M41 1C63.091 1 81 18.908 81 41C81 63.091 63.091 81 41 81C18.909 81 1 63.091 1 41C1 18.908 18.909 1 41 1Z"
+                                    stroke="white" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M53 42H42V53H41V42H30V41H41V30H42V41H53V42Z" stroke="white" />
+                            </svg>
+
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-body__title">
+                                See The Unmatched Beauty Of The Great.
+                            </h3>
+                            <p class="card-body__p">
+                                Free directories: directories are perfect for customers that are...
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="" class="link-profile">
+                                <div class="card-footer-img-wrapper">
+                                    <img src="img/avatar1.png" alt="avatar1" class="avatar">
+                                </div>
+
+                                <div class="card-footer-text-wrapper">
+                                    <div class="avatar-name">
+                                        Isaac Dunn
+                                    </div>
+                                    <div class="date">
+                                        09 Feb 2017
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div class="card">
+                        <div class="card-head">
+                            <img src="img/card2.png" alt="" class="card-head__img">
+                            <svg class="maximize" data-img-source="img/card2.png" width="82" height="82"
+                                viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="maximaize-circle" fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M41 1C63.091 1 81 18.908 81 41C81 63.091 63.091 81 41 81C18.909 81 1 63.091 1 41C1 18.908 18.909 1 41 1Z"
+                                    stroke="white" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M53 42H42V53H41V42H30V41H41V30H42V41H53V42Z" stroke="white" />
+                            </svg>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-body__title">
+                                Effective Advertising Pointers.
+                            </h3>
+                            <p class="card-body__p">
+                                Having a home based business is a wonderful asset to your life...
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="" class="link-profile">
+                                <div class="card-footer-img-wrapper">
+                                    <img src="img/avatar2.png" alt="avatar1" class="avatar">
+                                </div>
+
+                                <div class="card-footer-text-wrapper">
+                                    <div class="avatar-name">
+                                        Dominic Freeman
+                                    </div>
+                                    <div class="date">
+                                        24 Apr 2017
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div class="card">
+                        <div class="card-head">
+                            <img src="img/card3.png" alt="" class="card-head__img">
+                            <svg class="maximize" data-img-source="img/card3.png" width="82" height="82"
+                                viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="maximaize-circle" fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M41 1C63.091 1 81 18.908 81 41C81 63.091 63.091 81 41 81C18.909 81 1 63.091 1 41C1 18.908 18.909 1 41 1Z"
+                                    stroke="white" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M53 42H42V53H41V42H30V41H41V30H42V41H53V42Z" stroke="white" />
+                            </svg>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-body__title">
+                                Hypnotize Yourself Into The Ghost.
+                            </h3>
+                            <p class="card-body__p">
+                                There are many things that are important to catalog design....
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="" class="link-profile">
+                                <div class="card-footer-img-wrapper">
+                                    <img src="img/avatar3.png" alt="avatar1" class="avatar">
+                                </div>
+
+                                <div class="card-footer-text-wrapper">
+                                    <div class="avatar-name">
+                                        Alice Ward
+                                    </div>
+                                    <div class="date">
+                                        30 Dec 2017
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div class="card">
+                        <div class="card-head">
+                            <img src="img/card1.png" alt="" class="card-head__img">
+                            <svg class="maximize" data-img-source="img/card1.png" width="82" height="82"
+                                viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="maximaize-circle" fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M41 1C63.091 1 81 18.908 81 41C81 63.091 63.091 81 41 81C18.909 81 1 63.091 1 41C1 18.908 18.909 1 41 1Z"
+                                    stroke="white" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M53 42H42V53H41V42H30V41H41V30H42V41H53V42Z" stroke="white" />
+                            </svg>
+
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-body__title">
+                                See The Unmatched Beauty Of The Great.
+                            </h3>
+                            <p class="card-body__p">
+                                Free directories: directories are perfect for customers that are...
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="" class="link-profile">
+                                <div class="card-footer-img-wrapper">
+                                    <img src="img/avatar1.png" alt="avatar1" class="avatar">
+                                </div>
+
+                                <div class="card-footer-text-wrapper">
+                                    <div class="avatar-name">
+                                        Isaac Dunn
+                                    </div>
+                                    <div class="date">
+                                        09 Feb 2017 (copy)
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div class="card">
+                        <div class="card-head">
+                            <img src="img/card2.png" alt="" class="card-head__img">
+                            <svg class="maximize" data-img-source="img/card2.png" width="82" height="82"
+                                viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="maximaize-circle" fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M41 1C63.091 1 81 18.908 81 41C81 63.091 63.091 81 41 81C18.909 81 1 63.091 1 41C1 18.908 18.909 1 41 1Z"
+                                    stroke="white" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M53 42H42V53H41V42H30V41H41V30H42V41H53V42Z" stroke="white" />
+                            </svg>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-body__title">
+                                Effective Advertising Pointers.
+                            </h3>
+                            <p class="card-body__p">
+                                Having a home based business is a wonderful asset to your life...
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="" class="link-profile">
+                                <div class="card-footer-img-wrapper">
+                                    <img src="img/avatar2.png" alt="avatar1" class="avatar">
+                                </div>
+
+                                <div class="card-footer-text-wrapper">
+                                    <div class="avatar-name">
+                                        Dominic Freeman
+                                    </div>
+                                    <div class="date">
+                                        24 Apr 2017 (copy)
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-head">
+                            <img src="img/card3.png" alt="" class="card-head__img">
+                            <svg class="maximize" data-img-source="img/card3.png" width="82" height="82"
+                                viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="maximaize-circle" fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M41 1C63.091 1 81 18.908 81 41C81 63.091 63.091 81 41 81C18.909 81 1 63.091 1 41C1 18.908 18.909 1 41 1Z"
+                                    stroke="white" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M53 42H42V53H41V42H30V41H41V30H42V41H53V42Z" stroke="white" />
+                            </svg>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-body__title">
+                                Hypnotize Yourself Into The Ghost.
+                            </h3>
+                            <p class="card-body__p">
+                                There are many things that are important to catalog design....
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="" class="link-profile">
+                                <div class="card-footer-img-wrapper">
+                                    <img src="img/avatar3.png" alt="avatar1" class="avatar">
+                                </div>
+
+                                <div class="card-footer-text-wrapper">
+                                    <div class="avatar-name">
+                                        Alice Ward
+                                    </div>
+                                    <div class="date">
+                                        30 Dec 2017(copy)
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-head">
+                            <img src="img/card1.png" alt="" class="card-head__img">
+                            <svg class="maximize" data-img-source="img/card1.png" width="82" height="82"
+                                viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="maximaize-circle" fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M41 1C63.091 1 81 18.908 81 41C81 63.091 63.091 81 41 81C18.909 81 1 63.091 1 41C1 18.908 18.909 1 41 1Z"
+                                    stroke="white" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M53 42H42V53H41V42H30V41H41V30H42V41H53V42Z" stroke="white" />
+                            </svg>
+
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-body__title">
+                                See The Unmatched Beauty Of The Great.
+                            </h3>
+                            <p class="card-body__p">
+                                Free directories: directories are perfect for customers that are...
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="" class="link-profile">
+                                <div class="card-footer-img-wrapper">
+                                    <img src="img/avatar1.png" alt="avatar1" class="avatar">
+                                </div>
+
+                                <div class="card-footer-text-wrapper">
+                                    <div class="avatar-name">
+                                        Isaac Dunn
+                                    </div>
+                                    <div class="date">
+                                        09 Feb 2017 (copy2)
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <div id="maximized">
+        <div id="cover"></div>
+
+        <div id="maximized-close">
+            <i class="fas fa-times"></i>
+        </div>
+
+        <img src="" alt="" id="maximized__img">
+
+    </div>
+
+    <section class="gallery">
+
+
+        <hr class="hline ">
+        <h2 class="title title--thin title--main">
+            Gallery
+        </h2>
+
+
+        <div class="container gallery-wrapper">
+            <div class="row equal">
+                <div class="col-md-6">
+                    <img src="img/gallery1.png" alt="" class="gallery__img">
+                </div>
+                <div class="col-md-6" style="display: flex; flex-direction: column; justify-content: space-between;">
+                    <div class="row equal">
+                        <div class="col-6">
+                            <img src="img/gallery2.png" alt="" class="gallery__img">
+
+                        </div>
+                        <div class="col-6">
+                            <img src="img/gallery3.png" alt="" class="gallery__img">
+                        </div>
+                    </div>
+                    <div class="row equal">
+                        <div class="col-6">
+                            <img src="img/gallery4.png" alt="" class="gallery__img">
+
+                        </div>
+                        <div class="col-6">
+                            <img src="img/gallery5.png" alt="" class="gallery__img">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <a href="" class="btn">See More</a>
+            </div>
+        </div>
+
+
+
+    </section>
+
+    <section id="contacts" class="contact">
+
+        <div class="map">
+
+        </div>
+
+
+
+        <div class="contact-wrapper">
+            <hr class="hline">
+            <h2 class="title title--small">get in touch</h2>
+
+            <div class="contact-wrapper-inner">
+
+                <div class="address">
+                    <div class="address-item"><i class="fas fa-map-marker-alt address-item__icon"></i> 91 Nolan
+                        Extensions
+                        Suite 670</div>
+                    <div class="address-item"><i class="fas fa-phone-alt address-item__icon"></i> +001 356-868-2454
+                    </div>
+                    <div class="address-item"><i class="fas fa-inbox address-item__icon"></i> gahuy93@gmail.com
+                    </div>
+                    <div class="address-item"><i class="fas fa-clock address-item__icon"></i> From 07:05AM to
+                        19:30PM</div>
+                </div>
+
+                <div>
+                    <form class="form" action="" method="post">
+                        <input class="form__input" type="text" name="name" id="form-name" placeholder="Name">
+                        <input class="form__input" type="email" name="email" id="form-email" placeholder="Email">
+                        <button class="btn btn--submit" type="submit">Submit</button>
+                    </form>
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 offset-md-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="241px"
+                        height="54px">
+                        <path fill-rule="evenodd" fill="rgb(255, 255, 255)"
+                            d="M238.639,43.629 L237.180,43.629 L237.180,45.768 L236.501,45.768 L236.501,39.707 L238.751,39.707 C240.107,39.707 241.000,40.434 241.000,41.629 L241.000,41.646 C241.000,42.954 239.918,43.629 238.639,43.629 ZM240.313,41.655 C240.313,40.788 239.669,40.338 238.699,40.338 L237.180,40.338 L237.180,43.005 L238.665,43.005 C239.660,43.005 240.313,42.468 240.313,41.671 L240.313,41.655 ZM231.447,30.218 C225.988,30.218 221.945,26.034 221.945,20.811 L221.945,20.759 C221.945,15.535 226.039,11.300 231.498,11.300 C236.957,11.300 241.000,15.483 241.000,20.707 L241.000,20.759 C241.000,25.982 236.905,30.218 231.447,30.218 ZM235.996,20.759 C235.996,18.134 234.151,15.847 231.447,15.847 C228.768,15.847 226.974,18.082 226.974,20.707 L226.974,20.759 C226.974,23.384 228.818,25.671 231.498,25.671 C234.202,25.671 235.996,23.436 235.996,20.811 L235.996,20.759 ZM218.598,45.871 C216.769,45.871 215.542,44.425 215.542,42.754 L215.542,42.737 C215.542,41.066 216.786,39.602 218.615,39.602 C220.444,39.602 221.671,41.049 221.671,42.720 L221.671,42.737 C221.671,44.408 220.426,45.871 218.598,45.871 ZM220.967,42.737 C220.967,41.360 219.972,40.235 218.598,40.235 C217.224,40.235 216.245,41.343 216.245,42.720 L216.245,42.737 C216.245,44.113 217.241,45.239 218.615,45.239 C219.988,45.239 220.967,44.131 220.967,42.754 L220.967,42.737 ZM205.464,11.664 L210.366,11.664 L210.366,25.437 L218.934,25.437 L218.934,29.854 L205.464,29.854 L205.464,11.664 ZM198.780,45.871 C196.892,45.871 195.725,44.486 195.725,42.754 L195.725,42.737 C195.725,41.074 196.935,39.602 198.738,39.602 C199.751,39.602 200.378,39.896 200.978,40.408 L200.541,40.927 C200.077,40.521 199.562,40.235 198.713,40.235 C197.381,40.235 196.428,41.369 196.428,42.720 L196.428,42.737 C196.428,44.182 197.347,45.257 198.807,45.257 C199.494,45.257 200.129,44.988 200.541,44.651 L200.541,43.143 L198.713,43.143 L198.713,42.529 L201.193,42.529 L201.193,44.945 C200.635,45.447 199.794,45.871 198.780,45.871 ZM187.365,11.664 L192.268,11.664 L192.268,25.437 L200.835,25.437 L200.835,29.854 L187.365,29.854 L187.365,11.664 ZM181.224,39.707 L181.903,39.707 L181.903,45.135 L185.285,45.135 L185.285,45.768 L181.224,45.768 L181.224,39.707 ZM167.977,11.664 L182.206,11.664 L182.206,15.951 L172.830,15.951 L172.830,18.706 L181.321,18.706 L181.321,22.682 L172.830,22.682 L172.830,25.566 L182.332,25.566 L182.332,29.854 L167.977,29.854 L167.977,11.664 ZM161.440,40.798 L161.440,45.768 L160.779,45.768 L160.779,39.707 L161.415,39.707 L165.201,44.564 L165.201,39.707 L165.862,39.707 L165.862,45.768 L165.321,45.768 L161.440,40.798 ZM155.666,25.618 C157.511,25.618 158.597,24.735 159.659,23.410 L163.349,26.112 C161.681,28.477 159.431,30.218 155.514,30.218 C150.460,30.218 146.391,26.242 146.391,20.811 L146.391,20.759 C146.391,15.458 150.359,11.300 155.716,11.300 C159.330,11.300 161.655,12.859 163.222,15.094 L159.532,18.030 C158.522,16.731 157.359,15.899 155.666,15.899 C153.190,15.899 151.446,18.056 151.446,20.707 L151.446,20.759 C151.446,23.488 153.190,25.618 155.666,25.618 ZM144.167,39.707 L144.844,39.707 L144.844,45.768 L144.167,45.768 L144.167,39.707 ZM136.305,11.664 L141.234,11.664 L141.234,29.854 L136.305,29.854 L136.305,11.664 ZM139.396,40.338 L137.378,40.338 L137.378,45.768 L136.692,45.768 L136.692,40.338 L134.674,40.338 L134.674,39.707 L139.396,39.707 L139.396,40.338 ZM126.218,29.854 L121.315,29.854 L121.315,16.081 L116.008,16.081 L116.008,11.664 L131.525,11.664 L131.525,16.081 L126.218,16.081 L126.218,29.854 ZM119.854,44.564 L119.854,39.707 L120.515,39.707 L120.515,45.768 L119.974,45.768 L116.093,40.798 L116.093,45.768 L115.432,45.768 L115.432,39.707 L116.068,39.707 L119.854,44.564 ZM99.476,19.875 L99.476,29.854 L94.624,29.854 L94.624,11.664 L99.198,11.664 L106.476,21.279 L106.476,11.664 L111.328,11.664 L111.328,29.854 L107.032,29.854 L99.476,19.875 ZM89.866,45.768 L89.180,45.768 L89.180,40.338 L87.162,40.338 L87.162,39.707 L91.884,39.707 L91.884,40.338 L89.866,40.338 L89.866,45.768 ZM79.986,30.218 C74.527,30.218 70.484,26.034 70.484,20.811 L70.484,20.759 C70.484,15.535 74.578,11.300 80.037,11.300 C85.496,11.300 89.539,15.483 89.539,20.707 L89.539,20.759 C89.539,25.982 85.444,30.218 79.986,30.218 ZM84.535,20.759 C84.535,18.134 82.690,15.847 79.986,15.847 C77.307,15.847 75.513,18.082 75.513,20.707 L75.513,20.759 C75.513,23.384 77.358,25.671 80.037,25.671 C82.741,25.671 84.535,23.436 84.535,20.811 L84.535,20.759 ZM68.047,53.769 L67.676,53.989 L36.367,0.225 L36.737,0.006 L46.622,16.981 L46.622,11.664 L51.803,11.664 L56.023,18.706 L60.243,11.664 L65.424,11.664 L65.424,29.854 L60.547,29.854 L60.547,19.407 L56.023,26.528 L55.922,26.528 L51.424,19.459 L51.424,25.225 L68.047,53.769 ZM30.983,12.958 L51.538,48.148 L22.919,48.400 L25.241,42.791 L41.890,42.644 L31.080,24.136 L17.439,48.449 L-0.000,48.602 L25.747,3.835 L28.976,9.361 L9.671,42.928 L14.191,42.888 L30.983,12.958 ZM72.172,45.768 L71.494,45.768 L71.494,39.707 L72.172,39.707 L72.172,45.768 ZM81.791,44.564 L81.791,39.707 L82.452,39.707 L82.452,45.768 L81.911,45.768 L78.030,40.798 L78.030,45.768 L77.369,45.768 L77.369,39.707 L78.005,39.707 L81.791,44.564 ZM100.939,40.330 L97.273,40.330 L97.273,42.399 L100.552,42.399 L100.552,43.022 L97.273,43.022 L97.273,45.143 L100.981,45.143 L100.981,45.768 L96.594,45.768 L96.594,39.707 L100.939,39.707 L100.939,40.330 ZM110.078,40.313 C110.369,40.607 110.541,41.032 110.541,41.507 L110.541,41.524 C110.541,42.529 109.854,43.118 108.911,43.291 L110.756,45.768 L109.923,45.768 L108.181,43.412 L106.464,43.412 L106.464,45.768 L105.785,45.768 L105.785,39.707 L108.370,39.707 C109.108,39.707 109.700,39.932 110.078,40.313 ZM106.464,40.338 L106.464,42.798 L108.309,42.798 C109.211,42.798 109.854,42.330 109.854,41.551 L109.854,41.533 C109.854,40.788 109.288,40.338 108.318,40.338 L106.464,40.338 ZM128.513,39.663 L131.252,45.768 L130.522,45.768 L129.818,44.165 L126.547,44.165 L125.834,45.768 L125.139,45.768 L127.878,39.663 L128.513,39.663 ZM129.552,43.551 L128.187,40.460 L126.813,43.551 L129.552,43.551 ZM152.850,39.602 C154.679,39.602 155.906,41.049 155.906,42.720 L155.906,42.737 C155.906,44.408 154.661,45.871 152.832,45.871 C151.003,45.871 149.776,44.425 149.776,42.754 L149.776,42.737 C149.776,41.066 151.021,39.602 152.850,39.602 ZM150.480,42.737 C150.480,44.113 151.476,45.239 152.850,45.239 C154.223,45.239 155.202,44.131 155.202,42.754 L155.202,42.737 C155.202,41.360 154.206,40.235 152.832,40.235 C151.459,40.235 150.480,41.343 150.480,42.720 L150.480,42.737 ZM173.861,39.663 L176.599,45.768 L175.870,45.768 L175.166,44.165 L171.895,44.165 L171.182,45.768 L170.487,45.768 L173.225,39.663 L173.861,39.663 ZM174.900,43.551 L173.534,40.460 L172.161,43.551 L174.900,43.551 ZM210.454,40.313 C210.746,40.607 210.918,41.032 210.918,41.507 L210.918,41.524 C210.918,42.529 210.231,43.118 209.287,43.291 L211.132,45.768 L210.299,45.768 L208.557,43.412 L206.840,43.412 L206.840,45.768 L206.161,45.768 L206.161,39.707 L208.746,39.707 C209.484,39.707 210.076,39.932 210.454,40.313 ZM206.840,40.338 L206.840,42.798 L208.685,42.798 C209.587,42.798 210.231,42.330 210.231,41.551 L210.231,41.533 C210.231,40.788 209.664,40.338 208.694,40.338 L206.840,40.338 ZM227.129,43.187 C227.129,44.494 227.816,45.230 228.966,45.230 C230.074,45.230 230.778,44.554 230.778,43.230 L230.778,39.707 L231.456,39.707 L231.456,43.179 C231.456,44.945 230.452,45.862 228.949,45.862 C227.464,45.862 226.451,44.945 226.451,43.230 L226.451,39.707 L227.129,39.707 L227.129,43.187 Z" />
+                    </svg>
+
+                </div>
+                <div class="col-md-4">
+                    <div class="nav-social">
+                        <a class="social-wrapper" href="https://www.facebook.com" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="social-wrapper" href="https://twitter.com" target="_blank"><i
+                                class="fab fa-twitter"></i></a>
+                        <a class="social-wrapper" href="https://www.instagram.com" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <div class="copy">
+                        Copyrights © 2017 Monticello | Made with <del>coffe and magic</del> <i class="fas fa-heart"></i>
+                        by
+                        Yurii
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="scripts/slick/slick.min.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/google-map.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7WNCiSWG3q3ubsfjzr5MabCLTm-4VH3w&callback=initMap">
+        </script>
+    <!-- AIzaSyA7WNCiSWG3q3ubsfjzr5MabCLTm-4VH3w -->
+
+</body>
+
+</html>
